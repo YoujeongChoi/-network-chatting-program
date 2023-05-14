@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_marginTop="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_following_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/main_following_user_img"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:background="@android:color/transparent"
+            app:civ_border_overlay="true"
+            android:src="@drawable/sample_main_following_user_img01"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/main_following_user_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ooooii"
+            android:textStyle="bold"
+            android:textSize="8dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/main_following_user_img"
+            android:layout_marginStart="5dp"/>
+
+        <TextView
+            android:id="@+id/main_following_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5시간 전"
+            android:textStyle="bold"
+            android:textSize="8dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/main_following_user_nickname"
+            android:layout_marginStart="8dp"/>
+
+        <ImageButton
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/dots"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            app:tint="#646D75"/>
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/main_following_vp"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:layout_constraintTop_toBottomOf="@id/main_following_user_info"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/main_following_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="테스트"
+        app:layout_constraintTop_toBottomOf="@id/main_following_vp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/main_following_tv"
+        android:gravity="center"
+        android:weightSum="4"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="15dp"
+        android:paddingBottom="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/main_following_heart"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/heart"/>     // 클릭시 ColorFilter
+
+            <TextView
+                android:id="@+id/main_following_heart_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:layout_marginStart="3dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/main_following_bookmark"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bookmark_icon"/>     // 클릭시 ColorFilter
+
+            <TextView
+                android:id="@+id/main_following_bookmark_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:layout_marginStart="3dp"/>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/main_following_comment"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/comment"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/main_following_share"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/share"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

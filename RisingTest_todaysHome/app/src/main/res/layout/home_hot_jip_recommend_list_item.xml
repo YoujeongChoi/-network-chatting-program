@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/home_hot_jipdeuli_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:layout_gravity ="center"
+            android:id="@+id/cv"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="20dp"
+            android:outlineProvider="none"
+            app:cardElevation="0dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/food_list_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/food_example"
+                app:riv_border_color="@android:color/transparent"
+                app:riv_corner_radius="20dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageButton
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bookmark_icon"
+            android:layout_alignBottom="@+id/cv"
+            android:layout_alignRight="@+id/cv"
+            android:layout_margin="13dp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="감각이 살아나는 공간, 디자이너의 홈 오피스"
+        app:layout_constraintTop_toBottomOf="@id/home_hot_jipdeuli_rl"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black"
+        android:textSize="11dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

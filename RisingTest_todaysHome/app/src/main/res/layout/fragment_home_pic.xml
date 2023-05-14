@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="homeFragment.HomePicFragment"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/home_pic_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="15dp">
+
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/home_pic_icon_01"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"/>
+
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/home_pic_icon_02"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:layout_marginStart="15dp"/>
+
+<!--        <Spinner-->
+<!--            android:layout_width=""-->
+<!--            android:layout_height=""-->
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_pic_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/home_pic_category" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

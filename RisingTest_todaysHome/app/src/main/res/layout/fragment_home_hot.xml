@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="homeFragment.HomeHotFragment"
+    android:background="#F6F8FA">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_cl_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingBottom="20dp"
+        android:layout_marginTop="1dp">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/banner_ad_vp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/banner_round_rectangle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <LinearLayout
+            android:id="@+id/main_category_ll_01"
+            app:layout_constraintTop_toBottomOf="@+id/banner_ad_vp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp">
+
+            <LinearLayout
+                android:id="@+id/main_cate_shopping"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/main_category_shopping"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="쇼핑하기"
+                    android:textColor="@color/black"
+                    android:textSize="9dp"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_cate_baesong"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp">
+
+                <ImageButton
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/main_category_baesong"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="빠른배송"
+                    android:textColor="@color/black"
+                    android:textSize="9dp"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_cate_npyeong"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/main_category_npyeong"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N평집들이"
+                    android:textColor="@color/black"
+                    android:textSize="9dp"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_cate_gonggan"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/main_category_gonggan"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="공간별사진"
+                    android:textColor="@color/black"
+                    android:textSize="9dp"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_cate_sigong"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/main_category_siggong"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="시공이벤트"
+                    android:textColor="@color/black"
+                    android:textSize="9dp"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_category_ll_02"
+            app:layout_constraintTop_toBottomOf="@+id/main_category_ll_01"
+            app:layout_constraintStart_toStartOf="@id/main_category_ll_01"
+            app:layout_constraintEnd_toEndOf="@id/main_category_ll_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="3dp">
+
+            <LinearLayout
+                android:id="@+id/main_cate_oneul"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/main_category_oneul"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="오늘의딜"
+                    android:textColor="@color/black"
+                    android:textSize="9dp"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_cate_isa"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/main_category_issa"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="쉬운이사"
+                    android:textColor="@color/black"
+                    android:textSize="9dp"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_cate_nureumyeon"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="15dp">
+
+                <ImageButton
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/main_category_nureumyun"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="누르면할인"
+                    android:textColor="@color/black"
+                    android:textSize="9dp"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_cate_gagu"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="5dp">
+
+                <ImageButton
+
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/main_category_gagu"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가구초특가"
+                    android:textColor="@color/black"
+                    android:textSize="9dp"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_cate_zip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="7dp"
+                android:clickable="true">
+
+                <ImageButton
+
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/main_category_zip"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="집에서뭐해?"
+                    android:textColor="@color/black"
+                    android:textSize="9dp"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/home_hot_recommend_jipdeuli_cl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/main_cl_01"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/main_jipdeuli_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="닉네임"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="님을 위한 추천 집들이"
+            app:layout_constraintStart_toEndOf="@id/main_jipdeuli_nickname"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/home_hot_jipdeuli_sub_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="요즘 이런 스타일 좋아하시더라구요"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/main_jipdeuli_nickname"
+            app:layout_constraintStart_toStartOf="@id/main_jipdeuli_nickname"
+            android:layout_marginTop="5dp"
+            android:textSize="9dp"/>
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/home_smile"
+            app:layout_constraintStart_toEndOf="@id/home_hot_jipdeuli_sub_tv"
+            app:layout_constraintTop_toTopOf="@id/home_hot_jipdeuli_sub_tv"
+            android:layout_marginStart="3dp"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/home_hot_jipdeuli_sub_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/home_hot_recommend_jipdeuli_cl"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/home_jipdeuli_for_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="자취생을 위한 집들이"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/home_smile"
+            app:layout_constraintStart_toEndOf="@+id/home_jipdeuli_for_tv"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="7dp"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="2dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/home_jipdeuli_for_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
